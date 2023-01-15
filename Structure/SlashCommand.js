@@ -11,6 +11,10 @@ module.exports = async(bot) => {
         new SlashCommandBuilder()
         .setName("ping")
         .setDescription('Get the ping of the bot'),
+        // About
+        new SlashCommandBuilder()
+        .setName("about")
+        .setDescription('Get information about the organization'),
     ]
 
     const rest = new REST({ version: '10' }).setToken(token);
