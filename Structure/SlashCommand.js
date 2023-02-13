@@ -15,6 +15,18 @@ module.exports = async(bot) => {
         new SlashCommandBuilder()
         .setName("about")
         .setDescription('Get information about the organization'),
+        // Rank
+        new SlashCommandBuilder()
+        .setName("rank")
+        .setDescription('Get your rank or the rank of a member')
+        .addUserOption(option => option.setName("member").setDescription("The member you want to get the rank")),
+        new SlashCommandBuilder()
+        .setName("adddeadline")
+        .setDescription('Add a deadline')
+        .addStringOption(option => option.setName("name").setDescription("The name of the deadline").setRequired(true))
+        .addStringOption(option => option.setName("date").setDescription("The date of the deadline dd/mm/yyyy").setRequired(true))
+        .addStringOption(option => option.setName("time").setDescription("The time of the deadline hh:mm").setRequired(true))
+        .addStringOption(option => option.setName("description").setDescription("The description of the deadline").setRequired(true)),
     ]
 
     const rest = new REST({ version: '10' }).setToken(token);
