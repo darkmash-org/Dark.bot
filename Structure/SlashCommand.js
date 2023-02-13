@@ -20,6 +20,7 @@ module.exports = async(bot) => {
         .setName("rank")
         .setDescription('Get your rank or the rank of a member')
         .addUserOption(option => option.setName("member").setDescription("The member you want to get the rank")),
+        // Adddeadline
         new SlashCommandBuilder()
         .setName("adddeadline")
         .setDescription('Add a deadline')
@@ -27,6 +28,10 @@ module.exports = async(bot) => {
         .addStringOption(option => option.setName("date").setDescription("The date of the deadline dd/mm/yyyy").setRequired(true))
         .addStringOption(option => option.setName("time").setDescription("The time of the deadline hh:mm").setRequired(true))
         .addStringOption(option => option.setName("description").setDescription("The description of the deadline").setRequired(true)),
+        // Deadlines
+        new SlashCommandBuilder()
+        .setName("deadlines")
+        .setDescription('Get your reminders'),
     ]
 
     const rest = new REST({ version: '10' }).setToken(token);
