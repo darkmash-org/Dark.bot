@@ -32,6 +32,11 @@ module.exports = async(bot) => {
         new SlashCommandBuilder()
         .setName("deadlines")
         .setDescription('Get your reminders'),
+        // DeleteDeadline
+        new SlashCommandBuilder()
+        .setName("deletedeadline")
+        .setDescription('Delete a deadline')
+        .addStringOption(option => option.setName("name").setDescription("The name of the deadline").setRequired(true)),
     ]
 
     const rest = new REST({ version: '10' }).setToken(token);
