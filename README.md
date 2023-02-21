@@ -10,3 +10,16 @@ Discord Bot
             alt="darkmash-org"
           />
         </p>
+        
+        
+
+
+<hr>
+<details>
+    <summary><b>✨Discord Server & Support</b></summary><br/>
+ <h3 align="center">Darkmash Official Server </h3>
+ 
+### ⬇️ ⬇️ ⬇️ ⬇️ INVITE LINK ⬇️ ⬇️ ⬇️ ⬇️ 
+
+https://discord.gg/SC54bSgnyQ
+</details>
