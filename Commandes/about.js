@@ -10,7 +10,7 @@ module.exports = new Command({
     async run(bot, message, args, db){
         const about = new EmbedBuilder()
         .setTitle("About Darkmash")
-        .setColor("DARK")
+        .setColor("#000000")
         .setDescription("Work the way around.")
         .setThumbnail('https://avatars.githubusercontent.com/u/122222995?s=200&v=4')
         .addFields(
