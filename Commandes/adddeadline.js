@@ -12,22 +12,6 @@ module.exports = new Command({
     const date = message.options.getString("date");
     const time = message.options.getString("time");
     const description = message.options.getString("description");
-  
-    if(!date.match(/^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/)){
-        return message.reply({ content: "❌ The date is not valid !", ephemeral: true });
-    }
-    if(!time.match(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/)){
-        return message.reply({ content: "❌ The time is not valid !", ephemeral: true });
-    }
-    db.query(`INSERT INTO deadline_reminder (discord_id, discord_name, name, date, time, description) VALUES ('${message.user.id}', '${message.user.username}', '${name}', '${date}', '${time}', '${description}')`, (err, result) => {
-        if(err) throw err;
-        if(err) {
-            return message.reply({ content: "❌ An error has occurred while adding the deadline !", ephemeral: true });
-        }
-        else{
-            return message.reply({ content: "✅ The deadline has been added successfully !", ephemeral: true });
-        }
-    }
-    )  
+    message.reply("⚠️ The deadline system is not available yet ! ⚠️")
 }
 })
